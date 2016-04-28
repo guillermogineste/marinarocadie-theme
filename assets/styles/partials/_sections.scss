@@ -1,0 +1,43 @@
+.section {
+  &--title {
+    max-width: 610px;
+    text-align: center;
+    margin: 0 auto;
+    &:after {
+      content: "";
+      display: block;
+      width: 30px;
+      height: 1px;
+      background: $darkRed;
+      margin: 0 auto;
+    }
+    &--first {
+      margin-top: 15vh;
+    }
+    &--second {
+      margin-top: 30vh;
+    }
+  }
+  &--text {
+    padding: 15px;
+    max-width: 610px;
+    margin: 0 auto;
+    margin-top: 120px;
+    margin-bottom: 40vh;
+  }
+  &--single-image {
+    height: 80vh;
+    width: 80vw;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+}
+
+@media (min-width: 768px) {
+  .section {
+    &--text {
+      padding: 0px;
+    }
+  }
+}

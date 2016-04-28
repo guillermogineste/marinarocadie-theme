@@ -1,0 +1,55 @@
+.heading {
+  &--one {
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+  }
+  &--two {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  &--three {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $mediumGray;
+    letter-spacing: 1px;
+  }
+  &--four {
+    color: $darkRed;
+  }
+  &--five {
+  }
+  &--six {
+  }
+}
+.paragraph {
+  font-size: 16px;
+  line-height: 26px;
+  font-family: 'Source Sans Pro', sans-serif;
+  a {
+    position: relative;
+    color: $mediumGray;
+    border-bottom: 1px solid $lightRed;
+    padding-bottom: 2px;
+    transition: border-bottom 50ms ease-in-out;
+    &:hover {
+      top: -1px;
+      border-bottom: 2px solid $darkRed;
+      color: $mediumGray;
+    }
+  }
+}
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+}
+.horizontal-line {
+  border: none;
+  background: $lightRed;
+  height: 1px;
+  width: 50%;
+  margin: 60px auto;
+}
