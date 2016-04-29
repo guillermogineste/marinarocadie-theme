@@ -13,17 +13,21 @@
 		if (parseInt($(window).width()) > 768) {
 			if (!submenu.hasClass("open") && overlay.hasClass("open")){
 				overlay.removeClass("open");
+				overlay.fadeOut();
 			} else if (
 				submenu.hasClass("open") &&
 				overlay.hasClass("open") &&
 				$(this).hasClass("overlay")
 			) {
 				overlay.removeClass("open");
+				overlay.fadeOut();
 			} else {
 				overlay.addClass("open");
+				overlay.fadeIn();
 			}
 		} else {
 			overlay.toggleClass("open");
+			overlay.fadeToggle();
 		}
 
     // Prevent Scroll if overlay is open
@@ -86,6 +90,7 @@
 	var extendHeader = function() {
 		var headerNavigation = $(".header-navigation");
 		var submenu = $(".submenu");
+		var mainNavigation = $(".main-navigation");
 		// add open class to header navigation to expand background
 		if (!headerNavigation.hasClass("open")) {
       headerNavigation.animate({
@@ -109,7 +114,6 @@
 		$(".overlay")
 			.bind('click', toggleMenu)
 			.bind('click', openSubmenu)
-			.bind('click', extendHeader)
 			.bind('click', toggleOverlay);
     // Submeus interactions
 		$(".main-navigation__item")
@@ -117,6 +121,7 @@
 
 
     if (parseInt($(window).width()) > 768) {
+			$(".overlay").bind('click', extendHeader);
       // Submenu interaction if the screen is bigger than 768px
   		$(".main-navigation__item").click(function() {
   				toggleOverlay();
