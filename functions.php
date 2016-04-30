@@ -20,7 +20,7 @@ function header_nav(){
   global $post;
   // Get an array of all categories
   $categories = get_categories(array(
-    'orderby'   => 'name',
+    'orderby'   => 'description',
     'parent'    => 0,
   ) );
   // Loop each category and display the name + list of posts
@@ -69,9 +69,12 @@ function header_nav(){
   }
 
   // PAGES
+  // Get home page ID
+  $homepage = get_option('page_on_front');
+  // List all pages excluding the home page
   $page = wp_list_pages(array(
     'title_li' => '' ,
-    'exclude' => '9',
+    'exclude' => $homepage,
   ));
 
 }
