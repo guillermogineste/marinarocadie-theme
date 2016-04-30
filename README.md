@@ -37,3 +37,6 @@ Menu items order:
 2. Pages (ordered with the order field on each page)
 
 All pages will be listed except the one used as **Front Page**
+
+###Licence
+GNU General Public License v3.0
