@@ -1,5 +1,16 @@
 # Marina Roca Die - Wordpress Theme
 
+### Npm use:
+To run in _dev-mode_ using MAMP:
+
+1. Install LiveReload Extension
+2. To build and watch `npm run start`
+3. Browse localhost
+
+To build only:
+`npm run build`
+
+
 ### Plugins required
 - Custom Field Suite
 - Custom Post Type UI
