@@ -6,6 +6,7 @@
 
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
 		<link href="<?php echo get_template_directory_uri(); ?>/img/favicon.png" rel="shortcut icon">
+		<script src="<?php echo get_template_directory_uri(); ?>/assets/js/lazysizes.min.js" async=""></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css" media="screen" title="no title" charset="utf-8">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" media="screen" title="no title" charset="utf-8">
 

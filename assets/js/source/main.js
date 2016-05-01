@@ -106,6 +106,9 @@
 	};
 
 	$(document).ready(function() {
+
+		// $('img').delay(200).fadeTo(800, 1);
+
     // Mobile menu
 		$(".menu-icon")
 			.bind('click', toggleMenu)

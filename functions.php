@@ -43,9 +43,11 @@ function header_nav(){
         [
           'taxonomy' => 'category',
           'terms' => $category_ID,
-          'include_children' => true
+          'include_children' => true,
         ],
       ],
+      'offset' => 0,
+      'posts_per_page' => 14,
     ];
     $posts = get_posts($args);
 

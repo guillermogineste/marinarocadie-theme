@@ -1,4 +1,10 @@
 <?php get_header(); ?>
+	<script>
+
+	window.lazySizesConfig = {
+	addClasses: true
+	};
+	</script>
 
 	<main role="main">
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
@@ -24,20 +30,30 @@
 					$first = true;
           foreach ( $fields as $field ) {
 						if ( $first ) {
-				      printf('<div class="work work--first">');
+				      printf('<div class="work work--first lazyload">');
 				      $first = false;
 				    } else {
-				      printf('<div class="work">');
+				      printf('<div class="work lazyload">');
 				    }
             printf('<div class="work__wrapper">');
             // IMAGE
-            list($width, $height, $type, $attr) = getimagesize($field['image']);
-            printf('<img class="work__image" src="%1$s" alt="%2$s">',
-              $field['image'],
-              $field['title'],
-              $width,
-              $height
+
+						$thumbnail_image_attributes = wp_get_attachment_image_src($field['image'], 'thumbnail');
+						$full_image_attributes = wp_get_attachment_image_src($field['image'], 'full');
+						// printf($image_attributes[0]);
+
+            printf('<img class="work__image lazyload" data-src="%1$s" data-expand="100">',
+              $full_image_attributes[0],
+              $field['title']
             );
+
+
+
+
+						// printf(wp_get_attachment_image_srcset($field['image']));
+						// echo "<br><br>";
+						// printf(wp_get_attachment_image_sizes($field['image']));
+
             // CAPTION
             printf('<div class="work__caption">');
             // Fields
@@ -52,7 +68,7 @@
 	            );
             }
             if ($field['width'] && $field['height']) {
-							printf('<span class="work__caption__text work__caption__text--size">%1$sx%2$s cm</span>',
+							printf('<span class="work__caption__text work__caption__text--size">%1$s x %2$s cm</span>',
 	              $field['width'],
 	              $field['height']
 	            );
