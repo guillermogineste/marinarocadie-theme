@@ -42,17 +42,12 @@
 						$full_image_attributes = wp_get_attachment_image_src($field['image'], 'full');
 						// printf($image_attributes[0]);
 
-            printf('<img class="work__image lazyload" data-src="%1$s" data-expand="100">',
+            printf('<img class="work__image lazyload" data-src="%1$s" data-expand="100" alt="%1$s">',
               $full_image_attributes[0],
               $field['title']
             );
 
-
-
-
-						// printf(wp_get_attachment_image_srcset($field['image']));
-						// echo "<br><br>";
-						// printf(wp_get_attachment_image_sizes($field['image']));
+						// print_r($full_image_attributes);
 
             // CAPTION
             printf('<div class="work__caption">');

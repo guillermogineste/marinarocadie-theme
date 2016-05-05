@@ -1,11 +1,12 @@
 {
   "name": "marina-roca-die-wordpress-theme",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Marina Roca Die - Wordpress Theme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp styles plugins scripts images",
-    "start": "gulp"
+    "start": "gulp",
+    "zip": "zip -r marinarocadie-theme-1.0.zip ./* -x node_modules/\\* -x .git/\\* -x \"*.DS_Store\""
   },
   "author": "guillermogineste",
   "devDependencies": {

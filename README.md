@@ -30,6 +30,9 @@ Import:
 ```
 [{"post_title":"Works in project","post_name":"add-work","cfs_fields":[{"id":"6","name":"works","label":"Works","type":"loop","notes":"","parent_id":0,"weight":0,"options":{"row_display":"0","row_label":"Work","button_label":"Add Work","limit_min":"","limit_max":""}},{"id":"1","name":"image","label":"Image","type":"file","notes":"","parent_id":6,"weight":1,"options":{"return_value":"url","required":"0"}},{"id":"2","name":"title","label":"Title","type":"text","notes":"","parent_id":6,"weight":2,"options":{"default_value":"","required":"0"}},{"id":"3","name":"technique","label":"Technique","type":"text","notes":"","parent_id":6,"weight":3,"options":{"default_value":"","required":"0"}},{"id":7,"name":"width","label":"Width","type":"text","notes":"","parent_id":6,"weight":4,"options":{"default_value":"","required":"0"}},{"id":8,"name":"height","label":"Height","type":"text","notes":"","parent_id":6,"weight":5,"options":{"default_value":"","required":"0"}},{"id":"5","name":"year","label":"Year","type":"text","notes":"","parent_id":6,"weight":6,"options":{"default_value":"","required":"0"}}],"cfs_rules":{"post_types":{"operator":"==","values":["projects"]}},"cfs_extras":{"order":"0","context":"normal","hide_editor":"0"}}]
 ```
+```
+[{"post_title":"Social","post_name":"social","cfs_fields":[{"id":"10","name":"social-image","label":"Image","type":"file","notes":"","parent_id":0,"weight":0,"options":{"return_value":"url","required":"0"}},{"id":"11","name":"social-title","label":"Title","type":"text","notes":"","parent_id":0,"weight":1,"options":{"default_value":"","required":"0"}},{"id":"12","name":"social-description","label":"Description","type":"text","notes":"","parent_id":0,"weight":2,"options":{"default_value":"","required":"0"}}],"cfs_rules":{"post_types":{"operator":"==","values":["page","projects"]}},"cfs_extras":{"order":"0","context":"normal","hide_editor":"0"}}]
+```
 ### Header Menu
 Menu items order:
 

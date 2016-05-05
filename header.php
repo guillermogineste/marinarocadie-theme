@@ -1,5 +1,5 @@
 <!doctype html>
-<html <?php language_attributes(); ?> class="no-js">
+<html <?php language_attributes(); ?> class="no-js" prefix="og: http://ogp.me/ns#">
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
@@ -13,6 +13,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
+
+		<meta property="og:title" content="<?php echo CFS()->get( 'social-title' ); ?>" />
+		<meta property="og:url" content="<?php echo $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"] ?>" />
+		<meta property="og:image" content="<?php echo CFS()->get( 'social-image' ); ?>" />
+		<meta property="og:image" content="<?php echo CFS()->get( 'social-description' ); ?>" />
+
 
 	</head>
 	<body <?php body_class(); ?>>
